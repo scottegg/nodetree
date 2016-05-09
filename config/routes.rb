@@ -1,9 +1,20 @@
 Rails.application.routes.draw do
+  # get 'factories/index'
+
+  # get 'factories/show'
+
+  # get 'factories/new'
+
+  # get 'factories/edit'
+
+  # get 'factories/_form'
+  resources :factories
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'factories#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

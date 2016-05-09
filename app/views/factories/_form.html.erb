@@ -1,0 +1,34 @@
+<%= form_for(@factory) do |f| %>
+  <% if @factory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@factory.errors.count, "error") %> prohibited this factory from being saved:</h2>
+
+      <ul>
+      <% @factory.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :lower_limit %><br>
+    <%= f.number_field :lower_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :upper_limit %><br>
+    <%= f.number_field :upper_limit %>
+  </div>
+  <div class="field">
+    <%= f.label :node_quantity %><br>
+    <%= f.number_field :node_quantity %>
+  </div> 
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
